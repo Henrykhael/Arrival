@@ -1,0 +1,51 @@
+@use 'variaveis';
+
+.footer{
+    padding: 2.8vw 5.6vw;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo{
+        
+        img{
+            border-radius: 50px;
+            height: 5vw;
+            
+            @media (max-width: 667px){
+                height: 10vw;
+            }
+        }
+    }
+
+    &__links{
+        ul{
+            width: 18vw;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 1vw;
+
+            @media (max-width: 1366px){
+                width: 25vw;
+            }
+
+            @media (max-width: 667px){
+                width: 100%;
+            }
+
+            li{
+                a{
+                color: variaveis.$corFontePrincipal;
+                @media (max-width: 667px){
+                    margin: 0 10px;
+                }
+                }
+            }
+        }
+    }
+
+    &__copyright{
+        margin: 1vw 0;
+    }
+    
+}

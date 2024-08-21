@@ -1,0 +1,55 @@
+@use 'variaveis';
+@use 'hero';
+@use 'details';
+@use 'watch';
+@use 'faq';
+@use 'footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    letter-spacing: .15em;
+    font-weight: 400;
+}
+
+@media (max-width: 667px){
+    p{
+        font-size: 15px;
+    }
+}
+
+body{
+    background-color: #000;
+    color: variaveis.$corFontePrincipal;
+}
+
+@mixin title($fontSize: 20px){
+    font-size: $fontSize;
+    font-family: variaveis.$fonteTitle;
+}
+
+.title{
+    @include title;
+
+    @media (max-width: 667px){
+        @include title(15px);
+    }
+}
+
+.title--big{
+    @include title(30px);
+    
+    @media (max-width: 1366px){
+        @include title(40px);
+    }
+
+    @media (max-width: 667px){
+        @include title(25px);
+    }
+}
+
+.title--small{
+    @include title(15px);
+}
